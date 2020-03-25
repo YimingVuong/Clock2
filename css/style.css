@@ -1,0 +1,267 @@
+  /*IMPORT FONT */
+ @import url("https://use.typekit.net/edb2qog.css");
+ @import url('https://fonts.googleapis.com/css?family=Orbitron&display=swap');
+
+
+
+html { box-sizing: border-box; }
+*, 
+*:before, 
+*:after { box-sizing: inherit; }
+
+/*UNIVERSAL STYLING*/
+body{
+	margin: 0 auto;
+	font-family: brandon-grotesque, sans-serif;
+	color:eee;
+  background-image: linear-gradient(to right bottom, #13181e, #13181f, #131920, #121922, #121a23, #121b25, #121c27, #121d29, #121f2c, #12202f, #122233, #122436);
+  min-height: 100vh;
+}
+
+.flexContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.day{
+   background-image: url("../img/day.png");
+    -webkit-background-size: cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+.noon{
+  background: url("../img/noon.png");
+   -webkit-background-size: cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+.night{
+  background: url("../img/night.png");
+   -webkit-background-size: cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px 0 5px;
+}
+main  .col{
+  padding: 0;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 2.8em;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-bottom: 125px;
+}
+
+#clock{
+  font-family: 'Orbitron', sans-serif;
+  font-size:2.2em;
+  text-align: center;
+}
+
+#greetings{
+  font-weight: 390;
+  font-size: 1.4em;
+  line-height: 17px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+}
+
+#date{
+  font-weight: bold;
+  font-size: 1.4em;
+  line-height: 1.8em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+#stars{
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: $shadows-small;
+}
+
+/*GRID SETUP*/
+/*ROWS*/
+.row { position: relative; }
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/* COLUMNS */
+.col { 
+  width: auto; 
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+}
+
+
+.fade-in {
+  animation: fadeIn ease 5s;
+  -webkit-animation: fadeIn ease 5s;
+  -moz-animation: fadeIn ease 5s;
+  -o-animation: fadeIn ease 5s;
+  -ms-animation: fadeIn ease 5s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+
+/* MOBILE */
+@media only screen and (max-width: 425px) {
+  .sm-1 { width: 10%; }
+  .sm-2 { width: 20%; }
+  .sm-3 { width: 30%; }
+  .sm-4 { width: 40%; }
+  .sm-5 { width: 50%; }
+  .sm-6 { width: 60%; }
+  .sm-7 { width: 70%; }
+  .sm-8 { width: 80%; }
+  .sm-9 { width: 90%; }
+  .sm-10 { width: 100%; }
+
+#date{
+  text-align: center;
+}  
+}
+
+/*TABLET & SMALL DESKTOP */
+@media only screen and (min-device-width: 426px) and (max-device-width: 960px) {
+  .md-1 { width: 10%; }
+  .md-2 { width: 20%; }
+  .md-3 { width: 30%; }
+  .md-4 { width: 40%; }
+  .md-5 { width: 50%; }
+  .md-6 { width: 60%; }
+  .md-7 { width: 70%; }
+  .md-8 { width: 80%; }
+  .md-9 { width: 90%; }
+  .md-10 { width: 100%; }
+
+#greetings{
+  margin-bottom: 2.2em;
+  font-size: 1.8em;
+}
+
+#date{
+  font-size: 1.8em;
+}
+#clock{
+  position: relative;
+  top:400px;
+  right: 250px;
+}
+}
+
+/* LARGE DESKTOP*/
+@media only screen and (min-width: 961px) {
+  .lg-1 { width: 10%; }
+  .lg-2 { width: 20%; }
+  .lg-3 { width: 30%; }
+  .lg-4 { width: 40%; }
+  .lg-5 { width: 50%; }
+  .lg-6 { width: 60%; }
+  .lg-7 { width: 70%; }
+  .lg-8 { width: 80%; }
+  .lg-9 { width: 90%; }
+  .lg-10 { width: 100%; }
+
+
+.flex-container{
+    align-items: center;
+}
+
+  #greetings{
+  margin-bottom: 4.2em;
+  font-size: 1.8em;
+}
+
+#date{
+  font-size: 1.8em;
+}
+#clock{
+  position: relative;
+  top:350px;
+  right: 375px;}
+}
+
